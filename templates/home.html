@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenBook</title>
+    <!-- css and fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- css -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-1">
+        <a href="#" class="logo"> <i class="fas fa-book"></i>OpenBOOK</a>
+        <form action="" class="search-form">
+          <input type="search" name="" placeholder="search here" id="search-box">
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+          <div id="search-btn" class="fas fa-search"></div>
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <div id="login-btn" class="fas fa-user"></div>
+
+        </div>
+
+      </div>
+      <div class="header-2">
+        <nav class="navbar">
+          <a href="#home">Home</a>
+          <a href="#collection">Collection</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+    </header>
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="row">
+        <div class="content">
+          <h3>upto 25% off</h3>
+          <p>OpenBook presents you a lot of exciting offers in the occasion of new year. Don't miss the chance to get massive discount on your book purchase.</p>
+          <a href="#" class="btn">shop now</a>
+        </div>
+        <div class="swiper books-slider">
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide"><img src="static/images/7.jpeg"></a>
+            <a href="#" class="swiper-slide"><img src="static/images/4.jpeg"></a>
+            <a href="#" class="swiper-slide"><img src="static/images/5.jpeg"></a>
+            <a href="#" class="swiper-slide"><img src="static/images/8.jpeg"></a>
+            <a href="#" class="swiper-slide"><img src="static/images/6.jpeg"></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- features/collections section -->
+  <section class="collection" id="collection">
+    <h1 class="heading"> <span>Available Books</span> </h1>
+      <div class="collection-slider">
+        {% for i in range(book_name|length) %}
+            <div class="wrapper">
+             <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="static/images/5.jpeg" alt="">
+              </div>
+              <div class="content">
+                <h3>featured books</h3>
+                <div class="price">$15.99<span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+              </div>
+             </div>
+            </div>
+        {% endfor %}
+    </div>
+  </section>
+
+  <!-- newsletter section -->
+  <section class="newsletter">
+    <form action="">
+      <h3>Subscribe to our Newsletter</h3>
+      <input type="email" name="" placeholder="enter your email" id="" class="boxx">
+      <input type="submit" value="Subscribe" class="btn">
+    </form>
+  </section>
+
+ <!-- review sections -->
+  <section class="reviews" id="reviews">
+    <h1 class="heading"><span>client's reviews</span></h1>
+    <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box">
+          <img src="static/images/urgen.jpg">
+          <h3>Urgen Tamang</h3>
+          <p>OpenBook is one of the leading online platform that provides recommendation for user to read a book. So I want everyone to share this platform with friends and family.</p>
+        </div>
+        <div class="swiper-slide box">
+          <img src="static/images/rajesh.jpeg">
+          <h3>Rajesh Hamal</h3>
+          <p>I found this platform one of the best platform in nepal to buy books with one hundred percent reliability.</p>
+        </div>
+        <div class="swiper-slide box">
+          <img src="static/images/elon.jpg">
+          <h3>Elon Musk</h3>
+          <p>I found this platform one of the best platform in nepal to buy books with one hundred percent reliability.</p>
+        </div>
+        <div class="swiper-slide box">
+          <img src="static/images/mahabir.jpg">
+          <h3>Mahabir Pun</h3>
+          <p>I found this platform one of the best platform in nepal to buy books with one hundred percent reliability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- footer part -->
+
+  <section class="footer">
+    <div class="box-container">
+      <div class="bag">
+        <h3>Our locations</h3>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Kathmandu</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Pokhara</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Dharan</a>
+      </div>
+      <div class="bag">
+        <h3>Quick links</h3>
+        <a href="#"><i class="fa fa-angle-right"></i>Home</a>
+        <a href="#"><i class="fa fa-angle-right"></i>Collection</a>
+        <a href="#"><i class="fa fa-angle-right"></i>Reviews</a>
+      </div>
+      <div class="bag">
+        <h3>About</h3>
+        <a href="#"><i class="fa fa-angle-right"></i>FAQs</a>
+        <a href="#"><i class="fa fa-angle-right"></i>About Us</a>
+        <a href="#"><i class="fa fa-angle-right"></i>Careers</a>
+      </div>
+      <div class="bag">
+        <h3>Contact us</h3>
+        <a href="#"><i class="fas fa-phone"></i>01-12345</a>
+        <a href="#"><i class="fas fa-phone"></i>9801234567</a>
+        <a href="#"><i class="fas fa-envelope"></i>openbook@gmail.com</a>
+      </div>
+    </div>
+    <div class="share">
+      <a href="www.facebook.com" class="fab fa-facebook-f"></a>
+      <a href="www.twitter.com" class="fab fa-twitter"></a>
+      <a href="www.instagram.com" class="fab fa-instagram"></a>
+      <a href="www.tiktok.com" class="fab fa-tiktok"></a>
+    </div>
+    <div class="credit">Copyright protected by <span>OpenBooks, 2023 </span>Terms of use | Privacy policy</div>
+
+  </section>
+
+<!-- icons part -->
+
+    <!-- bottom navbar -->
+    <nav class="bottom-navbar">
+          <a href="#home" class="fas fa-home"></a>
+          <a href="#arrivals" class="fa-solid fa-layer-group"></a>
+          <a href="#reviews" class="fas fa-comment"></a>
+          <a href="#contact" class="fa-solid fa-phone"></a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="static/script/script.js"></script>
+  </body>
+</html>
